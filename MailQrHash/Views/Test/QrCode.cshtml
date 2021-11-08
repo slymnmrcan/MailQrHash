@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "QrCode";
+}
+
+
+<div>
+    @using (Html.BeginForm("QrCode", "Test", FormMethod.Post))
+            {
+                 <textarea name="qrcod" rows="4" cols="50"> </textarea>
+                @*<input type="text" name="qrcod"/>*@
+                <input type="submit" value="Oluştur" /> 
+            }
+</div>
+
+<br />
+
+@if (ViewBag.karekodimage != null)
+{
+    <img src="@ViewBag.karekodimage" />
+}
